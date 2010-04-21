@@ -1,6 +1,7 @@
 Nodules is an asynchronous module loader for Node that provides URL/HTTP-based module
 ids, module hot-reloading, and package based module mapping. Nodules 
-implements the CommonJS package.json mappings proposal and automatically
+implements the [CommonJS package.json mappings proposal](http://wiki.commonjs.org/wiki/Packages/Mappings) 
+and automatically
 analyzes modules references and downloads any dependencies on first access prior to
 executing modules. Remotely downloaded modules are retained so they only need 
 to be downloaded once. Nodules supports standard CommonJS modules, 
@@ -119,8 +120,8 @@ Nodules Local Cache
 Nodules downloads any necessary dependencies and stores them locally. By 
 default these files will be downloaded to a directory structure rooted in the current
 working directory. However, the location of the local directory of download packages/modules 
-can be defined with the WEB_MODULES_PATH environment variable. It is generally
-recommended that you define the WEB_MODULES_PATH variable (to an absolute path)
+can be defined with the NODULES_PATH environment variable. It is generally
+recommended that you define the NODULES_PATH variable (to an absolute path)
 so that the same set of cached/downloaded packages/modules can be reused from 
 different working directories.
 
