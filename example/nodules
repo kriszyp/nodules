@@ -4,6 +4,6 @@
 # can then start nodules from anywhere.
 
 # set the NODULES_PATH where downloaded modules are stored first
-export NODULES_PATH = /path/to/downloaded-modules
+export NODULES_PATH=/path/to/downloaded-modules
 
 node /path/to/lib/nodules.js $1
