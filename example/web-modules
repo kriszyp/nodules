@@ -1,0 +1,6 @@
+#!/bin/sh
+# This is an example startup script. Simply edit the line below to provide
+# the correct path to the web-modules.js file and put this script on your path. You 
+# can then start web-modules from anywhere.
+ 
+node /path/to/lib/web-modules.js $1
