@@ -85,6 +85,12 @@ For example:
 		app(request, response);
 	}).listen(80);
 
+Nodules does intelligent dependency tracking so that when a file changes, the appropriate
+modules are reloaded. All the modules that depend on the modified module are reloaded to
+ensure correct references, but modules without depedency on the modified module are not
+reloaded. This enabled optimal reloading performance while ensuring the proper references 
+to objects are flushed for consistent behavior.
+
 Module return values
 ====================
 
