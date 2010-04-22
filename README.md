@@ -7,10 +7,19 @@ executing modules. Remotely downloaded modules are retained so they only need
 to be downloaded once. Nodules supports standard CommonJS modules, 
 CommonJS module transport format via require and require.ensure.
 
-The easiest way to load a module with nodules is simply to load the module
+To see Nodules in action right away, go into the "example" directory, and you can start
+the example "package" with:
+
+    node ../lib/nodules.js
+    
+The first time you run this, Nodules should automatically download the dependency, and
+then start the application. You can test the module hot-reloading by making a change to 
+sibling.js while it is running.
+
+The most direct way to load a module with nodules is simply to load the module
 from the command prompt:
 
-    node /path/to/nodules http://somesite.com/my-module.js
+    node /path/to/nodules.js http://somesite.com/my-module.js
 
 The require provided by nodules is transitive, so all dependencies of my-module will also
 be able to utilize full URLs. Nodules asynchronously downloads all the deep 
