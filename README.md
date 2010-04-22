@@ -31,7 +31,7 @@ For any type of real development, it is recommended that you use packages rather
 than unorganized individual modules. Nodules provides an elegant mechanism for 
 working with packages based on package.json mappings. A package is a directory/file
 structure for a set of modules, module configuration, and other resources. An example
-can be found in the nodules's sample directory. If you run nodules from within
+can be found in the nodules's "example" directory. If you run nodules from within
 a package, it will automatically read the "package.json" from the current working directory
 for module configuration and id mapping, use the "lib" as one of the default paths for looking modules,
 and execute the "lib/index.js" file if it exists. The package.json's mappings can contain
@@ -97,8 +97,8 @@ Using Nodules Programmatically
 ==================================
 
 You can still use nodules programmatically without having to start Node with 
-nodules as the starting script. You can use nodules's ensure function to 
-asynchronously load an nodules's entry module:
+nodules as the starting script. You can use Nodules's ensure function to 
+asynchronously load an Nodules's entry module:
 
     require("nodules").ensure("http://somesite.com/foo", function(require){
       require("./foo");
@@ -119,7 +119,7 @@ Nodules Local Cache
 
 Nodules downloads any necessary dependencies and stores them locally. By 
 default these files will be downloaded to a directory structure rooted in the current
-working directory. However, the location of the local directory of download packages/modules 
+working directory (under "downloaded-modules"). However, the location of the local directory of downloaded packages/modules 
 can be defined with the NODULES_PATH environment variable. It is generally
 recommended that you define the NODULES_PATH variable (to an absolute path)
 so that the same set of cached/downloaded packages/modules can be reused from 
