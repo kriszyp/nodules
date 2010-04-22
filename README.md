@@ -109,7 +109,7 @@ Or
 
      
 Using Nodules Programmatically
-==================================
+==============================
 
 You can still use nodules programmatically without having to start Node with 
 nodules as the starting script. You can use Nodules's ensure function to 
@@ -130,7 +130,7 @@ so modules can still do:
     var fs = require("fs");
 
 Nodules Local Cache
-========================
+===================
 
 Nodules downloads any necessary dependencies and stores them locally. By 
 default these files will be downloaded to a directory structure rooted in the current
@@ -144,7 +144,7 @@ Note that it is perfectly valid and reasonable to edit and work on files from th
 downloaded file set within this path.
 
 More package.json Configurations
-================================= 
+================================
 Engine Specific Overlay
 -----------------------
 
@@ -160,7 +160,7 @@ package.json:
      }
 
 Compiler
--------
+--------
 
 We can also define a compiler to be used on sources prior to execution. This is 
 more efficient than using a global extension matching like registerExtension since
@@ -176,6 +176,14 @@ your package.json you can define a compiler to use:
           }
        ]
     }
+
+Nodules provided top level modules
+----------------------------------
+
+Nodules provides several top level modules for modules loaded with Nodules, including "promise" (promise library), 
+"system" (based on CommonJS module), "fs-promise" (promise based fs module), and 
+"nodules" (the nodules module itself).
+
 
 License
 =======
