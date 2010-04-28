@@ -140,8 +140,20 @@ recommended that you define the NODULES_PATH variable (to an absolute path)
 so that the same set of cached/downloaded packages/modules can be reused from 
 different working directories.
 
-Note that it is perfectly valid and reasonable to edit and work on files from the locally
-downloaded file set within this path.
+It is perfectly valid and reasonable to edit files from the locally
+downloaded file set within this path. By default URLs are mapped to the file 
+system by converting each part of the URL to a path, but this makes heavily 
+nested paths. To make it easier to edit and work with 
+your own packages, you can define a paths.json file in the NODULES_PATH 
+directory that defines how URLs are mapped to the local file system. For example,
+this makes a good paths.json for directing your git projects to your own
+projects directory:
+
+    {
+      "(jar:)?http://github.com/my-name/([^\/]+)/zipball/[^\/]+!?" : "/projects/$2"
+    }
+
+(URLs that don't match will be saved using the default mapping mechanism.)
 
 More package.json Configurations
 ================================
@@ -165,17 +177,18 @@ Compiler
 We can also define a compiler to be used on sources prior to execution. This is 
 more efficient than using a global extension matching like registerExtension since
 it only applies to the package that defines the compiler rather than being global. In
-your package.json you can define a compiler to use:
+your package.json you can define a compiler to use (this is how you would use CoffeeScript):
 
     {
-       "compilers": [
-          {
-             "module": "coffee-script-compiler",
-             "function": "compile",
-             "extension": "cs"
-          }
-       ]
+       "compiler": {
+             "module": "jar:http://github.com/jashkenas/coffee-script/zipball/master!/lib/coffee-script.js",
+             "function": "compile"
+       },
+       "extension": ".coffee",
+       ...
     }
+
+The "module" property is required, and the "function" property is optional and defaults to "compile".
 
 Nodules provided top level modules
 ----------------------------------
