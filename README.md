@@ -197,6 +197,10 @@ Nodules provides several top level modules for modules loaded with Nodules, incl
 "system" (based on CommonJS module), "fs-promise" (promise based fs module), and 
 "nodules" (the nodules module itself).
 
+Larger Example
+--------------
+
+You can download and run the [Persevere example wiki application](http://github.com/kriszyp/persevere-example-wiki/) with Nodules to see a more complex use of dependencies.
 
 License
 =======
