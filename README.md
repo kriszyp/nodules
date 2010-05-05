@@ -190,6 +190,12 @@ your package.json you can define a compiler to use (this is how you would use Co
 
 The "module" property is required, and the "function" property is optional and defaults to "compile".
 
+Proxy Settings
+--------------
+
+If your machine is behind a proxy, Nodules will need to go through the proxy for HTTP downloads. Nodules will 
+read the "http_proxy" environmental variable to determine what proxy it needs to route requests through.
+
 Nodules provided top level modules
 ----------------------------------
 
