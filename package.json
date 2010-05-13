@@ -12,5 +12,9 @@
 	"engines": {"node":">=0.1.90"},
 	"githubName": "nodules",
 	"type": "zip",
+	"main":"./lib/nodules",
+	"bin" : { 
+		"nodules" : "./lib/nodules" 
+	},
 	"location": "http://github.com/kriszyp/nodules/zipball/master"
 }
