@@ -1,7 +1,7 @@
 {
     "name": "web-modules-example",
 	"mappings": {
-		"commonjs-utils/": "jar:http://github.com/kriszyp/commonjs-utils/zipball/master!/lib/"
+		"commonjs-utils": "jar:http://github.com/kriszyp/commonjs-utils/zipball/master!/lib/"
 	},
     "version": "0.1",
     "description": "An example package for web-modules",
