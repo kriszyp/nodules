@@ -1,0 +1,16 @@
+{
+	"name": "nodules",
+	"author": "Kris Zyp",
+	"dependencies": [],
+	"contributors": [],
+	"keywords": [
+		"module",
+		"URI",
+		"async",
+		"reload"
+	],
+	"engines": {"node":">=0.1.90"},
+	"githubName": "nodules",
+	"type": "zip",
+	"location": "http://github.com/kriszyp/nodules/zipball/master"
+}
