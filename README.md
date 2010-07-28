@@ -46,13 +46,13 @@ for module configuration and id mapping, use the "lib" as one of the default pat
 and execute the "lib/index.js" file if it exists. The package.json's mappings can contain
 mappings to URIs so that you don't have to use URIs directly in your require calls in
 your modules. For example, your package.json could define this mapping to map the
-foo namespace to the modules from a package available from somesite.com:
+foo namespace to the modules from a package archive available from somesite.com:
 
     package.json
     {
        "name":"my-project",
        "mappings": {
-          "foo": "http://somesite.com/foo/lib/"
+          "foo": "http://somesite.com/foo.zip"
        }
     }
 
@@ -70,12 +70,11 @@ Now we can run our package by simply starting nodules from inside this directory
 Mappings
 --------
 
-Nodules supports referening modules within zip file via the jar: scheme, and for the vast 
-majority of projects that are in github repos, it is recommmended that you use jar: URIs. 
+Nodules supports referening package zip file which is the recommended mechanism for referencing packages:
 For example:
 
     "mappings": {
-       "commonjs-utils": "jar:http://github.com/kriszyp/commonjs-utils/zipball/master!/lib/"
+       "commonjs-utils": "http://github.com/kriszyp/commonjs-utils/zipball/master"
     }
 
 When the target ends with a slash, the mapping will only match module ids in require statements 
@@ -83,8 +82,8 @@ where the mapping is the first term in a path, so this would match something of 
 
     require(""commonjs-utils/lazy-array");
 
-You can also map directly to individual modules by specifying the full URL with an extension.
-For example:
+You can also map directly to individual modules by specifying the full URL with an extension 
+(and Nodules support the jar: scheme). For example:
 
     "lazy-array": "jar:http://github.com/kriszyp/commonjs-utils/zipball/master!/lib/lazy-array.js"
 
