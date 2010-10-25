@@ -5,7 +5,7 @@ and automatically
 analyzes modules references and downloads any dependencies on first access prior to
 executing modules. Remotely downloaded modules are retained so they only need 
 to be downloaded once. Nodules supports standard CommonJS modules, 
-and CommonJS module transport format via require, require.ensure, [require.def](http://wiki.commonjs.org/wiki/Modules/Transport/C), and [require.define](http://wiki.commonjs.org/wiki/Modules/Transport/D).
+and CommonJS module transport format via require, require.ensure, [define](http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition), and [require.define](http://wiki.commonjs.org/wiki/Modules/Transport/D).
 
 To see Nodules in action right away, go into the "example" directory, and you can start
 the example "package" with:
