@@ -13,7 +13,7 @@
 	"githubName": "nodules",
 	"type": "zip",
 	"main":"./lib/nodules",
-	"version":"0.1.0",
+	"version":"0.2.4",
 	"bin" : { 
 		"nodules" : "./cli.js" 
 	},
